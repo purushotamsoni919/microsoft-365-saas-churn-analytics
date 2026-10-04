@@ -31,10 +31,10 @@ The objective was to identify the primary telemetry drivers of customer churn, q
 
 ```mermaid
 flowchart TD
-    A[Raw Telemetry & CRM Data<br/>5,000 Customer Accounts] --> B[1. SQL / T-SQL Engine<br/>Star Schema DDL, Window Functions,<br/>Cohort Retention & LTV Modeling]
-    A --> C[2. Python Data Science<br/>Statistical Hypothesis Testing, EDA,<br/>Random Forest Churn Prediction (ROC-AUC 0.79)]
-    B --> D[3. Power BI & DAX<br/>Star Schema Data Model,<br/>Time Intelligence & Churn Risk Heatmap]
-    C --> E[4. Excel Executive Suite<br/>Dynamic KPI Model, XLOOKUP Tool,<br/>What-If Churn Sensitivity Model]
+    A["Raw Telemetry & CRM Data<br/>5,000 Customer Accounts"] --> B["1. SQL / T-SQL Engine<br/>Star Schema DDL, Window Functions,<br/>Cohort Retention & LTV Modeling"]
+    A --> C["2. Python Data Science<br/>Statistical Hypothesis Testing, EDA,<br/>Random Forest Churn Prediction (ROC-AUC 0.79)"]
+    B --> D["3. Power BI & Web BI<br/>Live Interactive Web Dashboard,<br/>Time Intelligence & Churn Risk Heatmap"]
+    C --> E["4. Excel Executive Suite<br/>Dynamic KPI Model, XLOOKUP Tool,<br/>What-If Churn Sensitivity Model"]
 ```
 
 | Tool | Focus Area | Key Deliverables |

@@ -1,4 +1,21 @@
 # 🚀 Microsoft 365 SaaS Subscription & Customer Churn Analytics
+
+<p align="center">
+  <a href="https://purushotamsoni919.github.io/microsoft-365-saas-churn-analytics/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_LIVE_INTERACTIVE_DASHBOARD-CLICK_HERE_TO_VIEW-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Live Interactive Dashboard" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL_Server_/_MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
+  <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" />
+</p>
+
+**Live Interactive Dashboard**: [**Launch Web Dashboard ↗**](https://purushotamsoni919.github.io/microsoft-365-saas-churn-analytics/)  
 **An End-to-End Enterprise Analytics Project built with Excel, SQL, Python, and Power BI**
 
 ---

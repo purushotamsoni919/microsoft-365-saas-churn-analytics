@@ -39,10 +39,10 @@ flowchart TD
 
 | Tool | Focus Area | Key Deliverables |
 | :--- | :--- | :--- |
+| **Power BI & Web BI** | Executive Dashboards & BI | **Live Interactive Web Dashboard** (deployed via GitHub Pages), Custom Modern Theme (`#EDF2F9`), Star Schema Data Model, and complete DAX Measures library (`CALCULATE`, `DIVIDE`, `SAMEPERIODLASTYEAR`). |
+| **SQL (MySQL / T-SQL / SQLite)** | Data Warehousing & Staging | Star Schema DDL, 30-Day Rolling Revenue Window queries, Top N Dense Ranking per Industry, Churn Early Warning detector, and Customer Lifetime Value (LTV). Deployed directly into local MySQL Server (`m365_saas_analytics`). |
+| **Python (Pandas / Scikit-Learn)** | Statistical Testing & ML | Chi-Square A/B test analysis (χ² = 74.28, p < 0.001), Random Forest Churn Risk Classifier (ROC-AUC 0.7868), and Automated MySQL ETL pipeline. |
 | **Microsoft Excel** | Financial & Scenario Modeling | Dynamic KPI model (`SUMIFS`, `COUNTIFS`), `XLOOKUP` Account Risk search engine, and a What-If Churn Reduction Sensitivity Model. |
-| **SQL (MySQL / T-SQL / SQLite)** | Data Warehousing & Staging | Star Schema DDL, 30-Day Rolling Revenue Window queries, Top $N$ Dense Ranking per Industry, Churn Early Warning detector, and Customer Lifetime Value (LTV). Deployed directly into local MySQL Server (`m365_saas_analytics`). |
-| **Python (Pandas / Scikit-Learn)** | Statistical Testing & ML | Chi-Square A/B test analysis ($\chi^2 = 74.28, p < 0.001$), Random Forest Churn Risk Classifier (ROC-AUC `0.7868`), and Automated MySQL ETL pipeline. |
-| **Power BI / DAX** | Business Intelligence & Visuals | Star Schema Data Model, DAX Measures library (`CALCULATE`, `DIVIDE`, `SAMEPERIODLASTYEAR`), and Churn Early Warning Dashboard. |
 
 ---
 

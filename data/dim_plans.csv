@@ -1,0 +1,6 @@
+plan_id,plan_name,tier,monthly_price,storage_limit_gb
+1,M365 Business Basic,SMB,6.0,1000
+2,M365 Business Standard,SMB,12.5,1000
+3,M365 Business Premium,SMB,22.0,1000
+4,M365 E3,Enterprise,36.0,5000
+5,M365 E5,Enterprise,57.0,5000

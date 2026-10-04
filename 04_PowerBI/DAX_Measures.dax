@@ -1,0 +1,93 @@
+// ==============================================================================
+// POWER BI & DAX MEASURE LIBRARY - MICROSOFT 365 SaaS ANALYTICS
+// Star Schema: Dim_Customers (1) -> Fact_Subscriptions (*)
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// 1. CORE VOLUME & KPI MEASURES
+// ------------------------------------------------------------------------------
+Total Customers = 
+DISTINCTCOUNT(Dim_Customers[customer_id])
+
+Active Customers = 
+CALCULATE(
+    [Total Customers],
+    Fact_Subscriptions[churn_status_flag] = 0
+)
+
+Churned Customers = 
+CALCULATE(
+    [Total Customers],
+    Fact_Subscriptions[churn_status_flag] = 1
+)
+
+Portfolio Churn Rate % = 
+DIVIDE(
+    [Churned Customers],
+    [Total Customers],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// 2. REVENUE & MONETIZATION MEASURES
+// ------------------------------------------------------------------------------
+Total MRR = 
+SUM(Fact_Subscriptions[mrr_amount])
+
+Active MRR = 
+CALCULATE(
+    [Total MRR],
+    Fact_Subscriptions[churn_status_flag] = 0
+)
+
+Total ARR = 
+[Total MRR] * 12
+
+ARPU (Average Revenue Per User) = 
+DIVIDE(
+    [Active MRR],
+    [Active Customers],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// 3. PRODUCT & ENGAGEMENT MEASURES
+// ------------------------------------------------------------------------------
+Avg Teams Adoption % = 
+AVERAGE(Fact_Monthly_Usage[teams_active_pct])
+
+Copilot Penetration Rate % = 
+DIVIDE(
+    CALCULATE([Total Customers], Fact_Subscriptions[copilot_addon_flag] = 1),
+    [Total Customers],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// 4. TIME INTELLIGENCE & YoY GROWTH
+// ------------------------------------------------------------------------------
+MRR Prior Year = 
+CALCULATE(
+    [Total MRR],
+    SAMEPERIODLASTYEAR(Dim_Date[Date])
+)
+
+MRR YoY Growth % = 
+DIVIDE(
+    [Total MRR] - [MRR Prior Year],
+    [MRR Prior Year],
+    0
+)
+
+// ------------------------------------------------------------------------------
+// 5. CUSTOMER LIFETIME VALUE (LTV)
+// ------------------------------------------------------------------------------
+Customer Lifetime Value (LTV) = 
+VAR GrossMarginPct = 0.80
+VAR CurrentChurn = [Portfolio Churn Rate %]
+RETURN
+DIVIDE(
+    [ARPU] * GrossMarginPct,
+    CurrentChurn,
+    0
+)

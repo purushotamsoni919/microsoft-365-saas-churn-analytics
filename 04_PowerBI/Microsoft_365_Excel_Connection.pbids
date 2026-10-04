@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "connections": [
+    {
+      "details": {
+        "protocol": "file",
+        "address": {
+          "path": "D:\\New folder\\PK\\DATA ANALYST\\Microsoft_Data_Analytics_Project\\01_Excel\\Microsoft_365_SaaS_Analytics.xlsx"
+        },
+        "authentication": null,
+        "query": null
+      },
+      "options": {},
+      "mode": null
+    }
+  ]
+}
